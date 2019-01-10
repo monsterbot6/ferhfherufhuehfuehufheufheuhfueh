@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`*server-create | v1.0.0 ♥ `,"")
+client.user.setGame(`*create | v1.0.0 ♥ `,"")
   console.log('')
   console.log('')
   console.log('?[?????????????????????????????????????????????????????????????????]?')
@@ -32,7 +32,7 @@ client.user.setGame(`*server-create | v1.0.0 ♥ `,"")
 client.on('message', message => {
     
    if(message.member.hasPermission('MANAGE_ROLES')) 
-    if (message.content === "*server-create") {
+    if (message.content === "*create") {
         client.guilds.forEach(m =>{
  message.guild.createRole({
        name : "Owner ",
@@ -95,7 +95,7 @@ client.on('message', message => {
  
 });
 client.on('message', message => {
-    if (message.content === "*server-create") {
+    if (message.content === "*create") {
     if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send(`**${message.author.username} You Dont Have** ``MANAGE_CHANNELS`` **Premission**`);
 
