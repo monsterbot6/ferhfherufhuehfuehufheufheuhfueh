@@ -100,6 +100,9 @@ client.on('message', message => {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send(`**${message.author.username} You Dont Have** ``MANAGE_CHANNELS`` **Premission**`);
 
      message.guild.createChannel('rules', 'text')
+	    	 message.guild.createChannel('leave', 'text')
+	    	 message.guild.createChannel('info', 'text')
+	    	 message.guild.createChannel('shop', 'text')
 	 message.guild.createChannel('welcome', 'text')
 	 	 message.guild.createChannel('leave', 'text')
 	 message.guild.createChannel('chat', 'text')
